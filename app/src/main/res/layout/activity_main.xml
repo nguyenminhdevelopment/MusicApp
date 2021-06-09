@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic"
+        android:hint="Search name"
+        android:padding="10dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/album1"
+        android:layout_width="0dp"
+        android:layout_marginTop="15dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/search"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@id/view"
+        android:background="#FF5722"
+        android:gravity="center"
+        android:text="Album 2" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_marginTop="15dp"
+        android:id="@+id/album2"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:layout_below="@id/search"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="16dp"
+        android:layout_toLeftOf="@id/view"
+        android:background="#00BCD4"
+        android:gravity="center"
+        android:text="Album 1" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcl_music"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/album1"
+        android:layout_marginTop="30dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_music" />
+
+</RelativeLayout>

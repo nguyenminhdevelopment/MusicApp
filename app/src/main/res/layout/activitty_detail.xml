@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgound"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvTime"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        android:fontFamily="sans-serif-smallcaps"
+        android:padding="14sp"
+        android:text="Ten Bai hat"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imgHinh"
+        android:layout_width="280dp"
+        android:layout_height="250dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:background="@null"
+        android:src="@drawable/itunes" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_alignBottom="@id/img_play"
+        android:layout_alignTop="@id/img_play"
+        android:layout_toStartOf="@id/img_play"
+        android:id="@+id/img_prev"
+        android:layout_width="wrap_content"
+        android:layout_marginRight="30dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:src="@drawable/previous"
+        android:layout_toLeftOf="@id/img_play" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_play"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:src="@drawable/pause" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/img_play"
+        android:layout_alignTop="@id/img_play"
+        android:layout_marginLeft="30dp"
+        android:layout_toRightOf="@id/img_play"
+        android:padding="10dp"
+        android:src="@drawable/next_icon" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:backgroundTint="#00f"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/img_next"
+        android:progressTint="#FF5100"
+        android:progress="50"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="30dp" />
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/seekBar"
+        android:layout_alignStart="@+id/seekBar"
+        android:layout_alignLeft="@id/seekBar"
+        android:layout_marginBottom="10dp"
+        android:text="00:00"
+        android:textColor="#DAE4DB"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvTimeTotal"
+        android:gravity="end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:layout_above="@+id/seekBar"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="8dp"
+        android:text="00:00"
+        android:textColor="#00BCD4"
+        android:textSize="20sp" />
+
+</RelativeLayout>
